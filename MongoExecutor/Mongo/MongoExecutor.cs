@@ -38,10 +38,7 @@ namespace MongoExecutor.Mongo
 
 		public string Script
 		{
-			get
-			{
-				return string.IsNullOrWhiteSpace(this._functions) ? ScriptWrapper.EmptyFunction : this._functions;
-			}
+			get => string.IsNullOrWhiteSpace(this._functions) ? ScriptWrapper.EmptyFunction : this._functions;
 			set
 			{
 				if (string.IsNullOrWhiteSpace(value))

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using MessageBox = System.Windows.MessageBox;
 
 namespace MongoExecutor
@@ -37,6 +38,13 @@ namespace MongoExecutor
 			this._mongo.Script = this.xCodeEditor.Document.Text;
 			var result = this._mongo.ExecuteCommand(this.xHost.Text, string.Empty, string.Empty);
 			this.xResultBox.Text = result;
+		}
+
+		protected override void OnClosed(EventArgs e)
+		{
+			this._mongo?.Dispose();
+
+			base.OnClosed(e);
 		}
 	}
 }

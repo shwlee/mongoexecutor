@@ -38,7 +38,9 @@
         </Grid>
 
         <Grid Grid.Row="2">
-            <TextBox x:Name="xResultBox" IsReadOnly="True" Margin="10"/>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <TextBox x:Name="xResultBox" IsReadOnly="True" Margin="10"/>
+            </ScrollViewer>
         </Grid>
 
         <Grid Grid.Row="3">

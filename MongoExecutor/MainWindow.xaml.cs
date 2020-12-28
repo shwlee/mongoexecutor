@@ -19,10 +19,7 @@ namespace MongoExecutor
 
 		private void OnLoaded(object sender, RoutedEventArgs e)
 		{
-			if (this._mongo == null)
-			{
-				this._mongo = new Mongo.MongoExecutor();
-			}
+			this._mongo ??= new Mongo.MongoExecutor();
 
 			this.xCodeEditor.Document.Text = this._mongo.Script;
 		}

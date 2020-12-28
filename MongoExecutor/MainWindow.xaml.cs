@@ -43,7 +43,6 @@ namespace MongoExecutor
 		protected override void OnClosed(EventArgs e)
 		{
 			this._mongo?.Dispose();
-
 			base.OnClosed(e);
 		}
 	}
